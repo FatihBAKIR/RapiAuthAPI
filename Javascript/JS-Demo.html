@@ -1,0 +1,15 @@
+<script type="text/javascript" src="RapiAuth.js"></script>
+<form action="#" method="POST">
+<input type="text" id="Token" name="token" value="Token" />
+<input type="text" id="Kod" name="kod" value="Kod" />
+<input type="button" value="Kontrol" onclick="tikla()" />
+</form>
+
+
+<script>
+function tikla()
+{
+	var auth = new RapiAuth("c4ca4238a0b923820dcc509a6f75849b");
+	alert(auth.Kontrol(document.getElementById("Token").value, document.getElementById("Kod").value) ? "Dogru" : "Yanlis");
+}
+</script>
